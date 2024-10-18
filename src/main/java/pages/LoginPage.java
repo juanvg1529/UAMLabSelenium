@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+
 import java.util.*;
+
 
 public class LoginPage extends Hooks {
 
@@ -14,14 +16,13 @@ public class LoginPage extends Hooks {
     @FindBy(xpath = "//a[@id='logout2']")
     private WebElement logoutButton;
 
+
     @FindBy(xpath = "//div[@class='col-lg-4 col-md-6 mb-4']")
     private List<WebElement> listOfPurchaseElements;
 
     @FindBy(xpath = "//h4[@class='card-title']/a")
     private List<WebElement> cardTitleList;
-    public String getLogoutText() throws Exception{
-        return getText(logoutButton);
-    }
+
     public AddToCartPage selectItemtoBuy(){
         String productSelected = null;
         List<String> itemsNames= new ArrayList<>();
@@ -43,4 +44,8 @@ public class LoginPage extends Hooks {
         return new AddToCartPage(driver);
 
     }
+    public String getLogoutText() throws Exception{
+        return getText(logoutButton);
+    }
+
 }

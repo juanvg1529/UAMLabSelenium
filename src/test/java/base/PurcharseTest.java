@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
+
 import pages.PurchaseForm;
 
 import java.time.LocalDateTime;
@@ -12,6 +13,7 @@ public class PurcharseTest extends BaseTest {
 
    @Test
     public void purchaseItemBlaze() throws Exception{
+
 
       var loadedPage=homePage.waitUntilPage();
       Assert.assertTrue(loadedPage);
@@ -38,7 +40,6 @@ public class PurcharseTest extends BaseTest {
       var loginPageAfterPurchase= purchaseCompletePage.clickConfirmationButton();
       var logOutTextAfterPurchase= loginPageAfterPurchase.getLogoutText();
       Assert.assertEquals(logOutTextAfterPurchase,"Log out");
-
 
    }
 

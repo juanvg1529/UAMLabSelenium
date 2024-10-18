@@ -5,7 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import org.openqa.selenium.support.ui.Wait;
+
+
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -49,10 +52,10 @@ public class Hooks {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             wait.until((ExpectedConditions.visibilityOf(element))).sendKeys(textToSend);
+
         }catch (Exception ex){
             throw  new Exception("Wasn't possible to send the text = "+textToSend+" to the element = "+element);
         }
-
     }
 
     public void printConsole(String text){
