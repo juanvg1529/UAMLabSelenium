@@ -7,3 +7,6 @@ UAM
 
 The purpuse of this test is to simulate the pruchase of one item choosed randomly, complete the purhchase and then validate
 that the purchase is completed succesfully.
+
+![image](https://github.com/user-attachments/assets/2ae26c71-eba0-4f28-ae4f-fd75e19cbbbe)
+
